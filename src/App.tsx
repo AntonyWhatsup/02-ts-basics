@@ -5,7 +5,7 @@ import VoteOptions from './components/VoteOptions/VoteOptions';
 import VoteStats from './components/VoteStats/VoteStats';
 import Notification from './components/Notification/Notification';
 
-// Визначення типу для параметра 'type'
+// Тип для голосу
 type VoteType = 'good' | 'neutral' | 'bad';
 
 function App() {
@@ -13,20 +13,17 @@ function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  // Явно вказуємо тип для параметра 'type'
   const handleVote = (type: VoteType) => {
     switch (type) {
       case 'good':
-        setGood((prevGood) => prevGood + 1);
+        setGood(prev => prev + 1);
         break;
       case 'neutral':
-        setNeutral((prevNeutral) => prevNeutral + 1);
+        setNeutral(prev => prev + 1);
         break;
       case 'bad':
-        setBad((prevBad) => prevBad + 1);
+        setBad(prev => prev + 1);
         break;
-      default:
-        return;
     }
   };
 
@@ -39,16 +36,25 @@ function App() {
   const total = good + neutral + bad;
 
   return (
-    <>
+    <div>
       <CafeInfo title="Expresso Cafe Feedback" />
-      <VoteOptions onVote={handleVote} onReset={handleReset} />
+      <VoteOptions
+        onVote={handleVote}
+        onReset={handleReset}
+        canReset={total > 0}
+      />
       <h2>Statistics</h2>
       {total > 0 ? (
-        <VoteStats good={good} neutral={neutral} bad={bad} total={total} />
+        <VoteStats
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={total}
+        />
       ) : (
         <Notification message="No feedback given" />
       )}
-    </>
+    </div>
   );
 }
 
