@@ -5,18 +5,17 @@
     padding: 16px;
     max-width: 300px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  }
-  
-  .stat {
+}
+
+.stat {
     font-size: 15px;
     color: #2d2d2d;
     margin: 8px 0;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .stat strong {
+}
+
+.stat strong {
     font-weight: 600;
     color: #0a66c2;
-  }
-  
+}

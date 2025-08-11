@@ -1,5 +1,5 @@
 {
-  "name": "02-ts-basics",
+  "name": "02-react-cafe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "modern-normalize": "^3.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

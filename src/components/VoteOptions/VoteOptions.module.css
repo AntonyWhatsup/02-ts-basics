@@ -2,9 +2,9 @@
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-  }
-  
-  .button {
+}
+
+.button {
     padding: 10px 22px;
     background-color: #0a66c2;
     color: #fff;
@@ -15,20 +15,19 @@
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;
     min-width: 120px;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #004182;
     border-color: #003060;
-  }
-  
-  .reset {
+}
+
+.reset {
     background-color: #dc3545;
     border-color: #dc3545;
-  }
-  
-  .reset:hover {
+}
+
+.reset:hover {
     background-color: #bb2d3b;
     border-color: #b02a37;
-  }
-  
+}
